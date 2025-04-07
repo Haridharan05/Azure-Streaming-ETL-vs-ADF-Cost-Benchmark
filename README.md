@@ -3,7 +3,7 @@
 **Goal :** Demonstrate—using reproducible code, metrics, and cost math—that a tiny **FastAPI** micro‑service running on an **Azure App Service (B1)** can ingest **≈ 50 GB of CSV data per day** faster *and* cheaper than an **Azure Data Factory (ADF) Copy** activity.
 
 <p align="center">
-  <img src="docs/architecture.svg" width="650" alt="High‑level architecture"/>
+  <img src="docs/architecture.png" width="650" alt="High‑level architecture"/>
 </p>
 
 ### Technical & functional architecture details
