@@ -1,0 +1,30 @@
+{
+    "annotations": { "list": [] },
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Rows / s",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "rate(loads_total[1m])",
+            "legendFormat": "rows/s"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "P95 latency",
+        "datasource": "Prometheus",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, sum(rate(load_seconds_bucket[5m])) by (le))",
+            "legendFormat": "p95"
+          }
+        ]
+      }
+    ],
+    "schemaVersion": 38,
+    "title": "ETL Benchmark",
+    "version": 1
+  }
